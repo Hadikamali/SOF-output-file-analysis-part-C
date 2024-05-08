@@ -1,4 +1,4 @@
-#SOF output file analysis part C
+##SOF output file analysis part C
 
 We aim to address the following questions next:<br>
 Implement a classifier using XGBoost to detect Accepted answers.<br>
@@ -7,7 +7,7 @@ Utilize cross-validation method.<br>
 Report which features have been the most important.<br>
 
 
-# Description
+##Description
 
 In this section, we merge the dataset files, join the necessary columns together, and adjust the times based on hour and minute.
 
