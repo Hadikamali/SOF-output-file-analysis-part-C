@@ -73,7 +73,7 @@ answers_question_user
 data = answers_question_user.drop(['Id_A', 'OwnerUserId_A','Id_Q', 'AId', 'QId','OwnerUserId_Q', 'Id' ,'CreationDate_A', 'CreationDate_Q', 'ClosedDate_A','ClosedDate_Q'], axis=1)
 data
 ```
-<img src="./img/Picture24.png" width="500" height="450">
+<img src="./img/Picture24.png" width="400" height="750">
 
 ```python
 data.info()
