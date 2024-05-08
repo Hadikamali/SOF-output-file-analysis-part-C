@@ -1,4 +1,4 @@
-# SOF output file analysis part C
+![image](https://github.com/Hadikamali/SOF-output-file-analysis-part-C/assets/91839469/c07706b6-1459-4d29-bbed-388287132ed0)# SOF output file analysis part C
 
 We aim to address the following questions next:<br>
 Implement a classifier using XGBoost to detect Accepted answers.<br>
@@ -160,5 +160,13 @@ print("Test set accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
 ```
-<img src="./img/Picture29.png" width="500" height="450">
+<img src="./img/Picture29.png" width="1050" height="220">
+
+## find best params
+
+```python
+sorted_idx = xgb_model.feature_importances_.argsort()
+plt.barh(X.columns[sorted_idx], xgb_model.feature_importances_[sorted_idx])
+```
+<img src="./img/Picture31.png" width="500" height="450">
 
