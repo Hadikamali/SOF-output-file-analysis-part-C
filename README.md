@@ -95,7 +95,7 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
 plt.title('Correlation Heatmap (Answers and related Questions)')
 plt.show()
 ```
-<img src="./img/Picture27.png" width="500" height="450">
+<img src="./img/Picture27-1.png" width="500" height="450">
 
 Training model based on all features:
 
