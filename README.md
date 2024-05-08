@@ -44,7 +44,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 Model Performance Report:
 
 
-<img src="./img/Picture21.png" width="400" height="350">
+<img src="./img/Picture21.png" width="400" height="400">
 
 Feature Importance Order in Model Training:
 
