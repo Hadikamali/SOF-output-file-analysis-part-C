@@ -162,7 +162,7 @@ print("Recall:", recall)
 ```
 <img src="./img/Picture29.png" width="1050" height="220">
 
-## find best params
+Order of importance of features in model training:
 
 ```python
 sorted_idx = xgb_model.feature_importances_.argsort()
@@ -170,3 +170,46 @@ plt.barh(X.columns[sorted_idx], xgb_model.feature_importances_[sorted_idx])
 ```
 <img src="./img/Picture31.png" width="500" height="450">
 
+## find best params
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split, GridSearchCV
+from xgboost import XGBClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score
+
+X = data.drop('accepted', axis=1)
+y = data['accepted']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+xgb_model = XGBClassifier()
+
+param_grid = {
+    'max_depth': [3, 5, 7],
+    'learning_rate': [0.01, 0.1, 0.2],
+    'n_estimators': [50, 100, 200],
+    'subsample': [0.8, 1.0],
+    'colsample_bytree': [0.8, 1.0]
+}
+
+grid_search = GridSearchCV(estimator=xgb_model, param_grid=param_grid, scoring='accuracy', cv=5, n_jobs=-1)
+
+grid_search.fit(X_train, y_train)
+
+print("Best Parameters:", grid_search.best_params_)
+print("Best Accuracy:", grid_search.best_score_)
+
+best_xgb_model = grid_search.best_estimator_
+best_xgb_model.fit(X_train, y_train)
+
+y_pred = best_xgb_model.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+
+print("Test set accuracy:", accuracy)
+print("Precision:", precision)
+print("Recall:", recall)
+```
