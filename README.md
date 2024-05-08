@@ -67,13 +67,13 @@ answers_question_user = pd.merge(answers_question, users, left_on='OwnerUserId_A
 answers_question_user
 ```
 
-<img src="./img/Picture23.png" width="850" height="350">
+<img src="./img/Picture23.png" width="1050" height="350">
 
 ```python
 data = answers_question_user.drop(['Id_A', 'OwnerUserId_A','Id_Q', 'AId', 'QId','OwnerUserId_Q', 'Id' ,'CreationDate_A', 'CreationDate_Q', 'ClosedDate_A','ClosedDate_Q'], axis=1)
 data
 ```
-<img src="./img/Picture24.png" width="850" height="350">
+<img src="./img/Picture24.png" width="1050" height="350">
 
 ```python
 data.info()
