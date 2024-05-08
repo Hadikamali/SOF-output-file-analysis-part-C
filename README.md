@@ -127,7 +127,7 @@ print("Test set accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
 ```
-<img src="./img/Picture28.png" width="1050" height="150">
+<img src="./img/Picture28.png" width="1050" height="250">
 
 Removing columns with low correlation:
 
