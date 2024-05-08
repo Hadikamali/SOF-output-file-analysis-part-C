@@ -170,7 +170,7 @@ plt.barh(X.columns[sorted_idx], xgb_model.feature_importances_[sorted_idx])
 ```
 <img src="./img/Picture31.png" width="500" height="450">
 
-## find best params
+## Find best params
 
 ```python
 import pandas as pd
