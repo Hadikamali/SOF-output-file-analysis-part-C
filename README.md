@@ -1,4 +1,4 @@
-![image](https://github.com/Hadikamali/SOF-output-file-analysis-part-C/assets/91839469/c07706b6-1459-4d29-bbed-388287132ed0)# SOF output file analysis part C
+ SOF output file analysis part C
 
 We aim to address the following questions next:<br>
 Implement a classifier using XGBoost to detect Accepted answers.<br>
