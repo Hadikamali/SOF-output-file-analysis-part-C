@@ -48,7 +48,7 @@ Model Performance Report:
 
 Feature Importance Order in Model Training:
 
-<img src="./img/Picture22.png" width="500" height="450">
+<img src="./img/Picture22.png" width="550" height="550">
 
 ## The following is about the execution of the XGboost code:
 
